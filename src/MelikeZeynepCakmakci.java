@@ -1,7 +1,19 @@
+/**
+ * Program shows the bouncing ball from
+ * box and walls.
+ *
+ * @author M.Zeynep Çakmakcı, Student ID: 2024719030
+ * @since Date: 09.10.2024
+ */
+
 import java.util.Random;
 
 public class MelikeZeynepCakmakci {
-
+    /**
+     * Creates a canvas to show a ball bouncing around
+     * box and walls with a random direction.
+     * @param args Main input arguments are not used.
+     */
     public static void main(String[] args) {
 
         StdDraw.setCanvasSize(1200, 800); // Set the size of the drawing canvas
@@ -10,14 +22,14 @@ public class MelikeZeynepCakmakci {
         StdDraw.enableDoubleBuffering(); // Use for faster animations
         int pauseDuration = 15; // Pause duration in milliseconds
 
-        double positionX = 0, positionY = -0.98;  // Initial (x,y) ball position
+        double radius = 0.05;  // Radius of the ball
+        double positionX = 0 + radius, positionY = -1 + radius;  // Initial (x,y) ball position
 
         Random random = new Random();
         int velocityAngle = random.nextInt(180);
         double velocityMagnitude = 0.03;
         double velocityX = velocityMagnitude * Math.cos(Math.toDegrees(velocityAngle));
         double velocityY = velocityMagnitude * Math.sin(Math.toDegrees(velocityAngle));
-        double radius = 0.05;  // Radius of the ball
 
         // The components of the Box
         double boxPositionX = 0.0, boxPositionY = 0.0; // (x,y) Box position
