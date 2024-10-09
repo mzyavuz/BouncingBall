@@ -1,6 +1,7 @@
 /**
- * Program shows the bouncing ball from
- * box and walls.
+ * This program demonstrates an animation of
+ * a bouncing ball within a canvas
+ * that also contains a rectangular box.
  *
  * @author M.Zeynep Çakmakcı, Student ID: 2024719030
  * @since Date: 09.10.2024
@@ -10,13 +11,14 @@ import java.util.Random;
 
 public class MelikeZeynepCakmakci {
     /**
-     * Creates a canvas to show a ball bouncing around
-     * box and walls with a random direction.
+     * The main method initializes the canvas and
+     * runs the animation loop.
      * @param args Main input arguments are not used.
      */
     public static void main(String[] args) {
 
-        StdDraw.setCanvasSize(1200, 800); // Set the size of the drawing canvas
+        // Set up the canvas
+        StdDraw.setCanvasSize(1200, 800); // Set the size of the canvas
         StdDraw.setXscale(-1.5, 1.5); // Set the scale of the coordinate system
         StdDraw.setYscale(-1.0, 1.0);
         StdDraw.enableDoubleBuffering(); // Use for faster animations
